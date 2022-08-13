@@ -25,3 +25,24 @@ export DOTNET_TieredCompilation=1
 make change, add benchmark and run 
 
 `dotnet run -c Release -filter "**" --runtimes net6.0`
+
+# install java and maven
+
+`sdk install maven`
+
+```java
+mvn archetype:generate \
+  -DinteractiveMode=false \
+  -DarchetypeGroupId=org.openjdk.jmh \
+  -DarchetypeArtifactId=jmh-java-benchmark-archetype \
+  -DgroupId=org.benchboy \
+  -DartifactId=beatdotnet \
+  -Dversion=1.0
+```
+
+```
+cd test
+mvn clean verify
+
+java -jar target/benchmarks.jar
+```
