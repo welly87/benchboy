@@ -241,3 +241,5 @@ _Pvt_Extensions
 .fake/
 
 cluster-mark-service-*.dat
+
+BenchmarkDotNet.Artifacts/
